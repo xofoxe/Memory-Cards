@@ -1,33 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Layout from "../components/Layout";
 import GameGrid from "../components/GameGrid";
 import Button from "../components/Button";
 import Modal from "../components/Modal";
 import ResultsPage from "./Results";
-import { useGame } from "../hooks/useGame";
+import { useCards } from "../hooks/useGame";
+import { useNavigate, useParams } from "react-router-dom";
 
-export default function GamePage({ onBackToStart }) {
+export default function GamePage() {
+  const { userId } = useParams();
+  const navigate = useNavigate();
+ 
   const {
     cards,
     flipped,
     matched,
     moves,
-    time,
     isFinished,
     handleFlip,
     resetGame,
     gridSize,
-  } = useGame();
+    time,
+  } = useCards();
 
-  const [showModal, setShowModal] = useState(false);
-
-  useEffect(() => {
-    if (isFinished) setShowModal(true);
+  const [showModal, setShowModal] = React.useState(false);
+ 
+  React.useEffect(() => {
+    if (isFinished) {
+      setShowModal(true);
+    }
   }, [isFinished]);
+
+const onBackToStart = () => navigate("/");
+
 
   const handleNext = () => {
     setShowModal(false);
-    onBackToStart(); 
+    onBackToStart();
   };
 
   return (

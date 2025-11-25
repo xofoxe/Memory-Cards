@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-export function useGame() {
+export function useCards() {
   const [cards, setCards] = useState([]);
   const [flipped, setFlipped] = useState([]);
   const [matched, setMatched] = useState([]);

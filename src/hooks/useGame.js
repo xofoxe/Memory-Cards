@@ -1,5 +1,16 @@
 import { useState, useEffect, useRef } from "react";
-
+/**
+ * Хук для керування логікою гри Memory Cards
+ *
+ * @param {GameSettings} settings - Налаштування гри
+ * @returns {Object} result
+ * @returns {Array<Card>} result.cards - Масив карт
+ * @returns {number} result.moves - Кількість ходів
+ * @returns {boolean} result.isGameOver - Чи завершена гра
+ * @returns {boolean} result.isWin - Чи виграна гра
+ * @returns {function(string): void} result.flipCard - Функція для перевороту карти
+ * @returns {function(): void} result.resetGame - Функція для скидання гри
+ */
 export function useCards() {
   const [cards, setCards] = useState([]);
   const [flipped, setFlipped] = useState([]);

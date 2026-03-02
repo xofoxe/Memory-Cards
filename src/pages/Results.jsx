@@ -1,5 +1,12 @@
 import Button from "../components/Button";
-
+/**
+ * Сторінка результатів гри
+ *
+ * @param {{
+ *   result: GameResult
+ * }} props
+ * @returns {JSX.Element}
+ */
 export default function ResultsPage({ result, onRestart, onNext}) {
   return (
        <> 

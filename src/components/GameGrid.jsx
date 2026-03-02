@@ -1,6 +1,13 @@
 import React from "react";
 import Card from "./Card";
-
+/**
+ * Сітка ігрових карт
+ *
+ * @param {Object} props
+ * @param {Array} props.cards - Масив карт
+ * @param {Function} props.onCardClick - Обробник кліку по карті
+ * @returns {JSX.Element}
+ */
 export default function GameGrid({ cards, flipped, matched, onFlip, gridSize }) {
   const cols = {
     "2x2": "grid-cols-2",

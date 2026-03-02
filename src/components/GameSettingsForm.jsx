@@ -17,7 +17,13 @@ const schema = yup.object({
     .max(3000, "Максимальна швидкість 3000 мс")
     .required("Вкажіть швидкість перевороту"),
 });
-
+/**
+ * Форма налаштувань гри
+ *
+ * @param {Object} props
+ * @param {Function} props.onStart - Викликається при старті гри
+ * @returns {JSX.Element}
+ */
 export default function GameSettingsForm() {
   const { settings, setSettings } = useGameSettings();
 

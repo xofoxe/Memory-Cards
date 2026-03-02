@@ -1,4 +1,12 @@
 import React from "react";
+/**
+ * Компонент однієї карти
+ *
+ * @param {Object} props
+ * @param {boolean} props.flipped
+ * @param {string} props.value
+ * @param {Function} props.onClick
+ */
 
 export default function Card({ flipped, value, onClick }) {
   return (

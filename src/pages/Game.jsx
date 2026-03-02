@@ -2,11 +2,16 @@ import React from "react";
 import Layout from "../components/Layout";
 import GameGrid from "../components/GameGrid";
 import Button from "../components/Button";
-import Modal from "../components/Modal";
+import {Modal} from "../components/Modal";
 import ResultsPage from "./Results";
 import { useCards } from "../hooks/useGame";
 import { useNavigate, useParams } from "react-router-dom";
-
+/**
+ * Сторінка гри
+ * Відповідає за запуск ігрового процесу
+ *
+ * @returns {JSX.Element}
+ */
 export default function GamePage() {
   const { userId } = useParams();
   const navigate = useNavigate();

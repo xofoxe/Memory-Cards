@@ -1,7 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-export default function Modal({ isOpen, onClose, children }) {
+/**
+ * Модальне вікно
+ *
+ * @function Modal
+ * @param {Object} props
+ * @param {boolean} props.isOpen
+ * @param {string} props.title
+ * @param {React.ReactNode} props.children
+ * @param {Function} props.onClose
+ * @returns {JSX.Element|null}
+ */
+export function Modal({ isOpen, onClose, children }) {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(

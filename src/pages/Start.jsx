@@ -2,7 +2,11 @@ import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
-
+/**
+ * Початкова сторінка
+ *
+ * @returns {JSX.Element}
+ */
 export default function StartPage() {
   const navigate = useNavigate();
   const { register, handleSubmit, reset, watch } = useForm({ defaultValues: { gridSize: "4x4" } });
